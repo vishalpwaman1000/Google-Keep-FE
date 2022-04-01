@@ -1,0 +1,120 @@
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+.Registration-Container {
+    height: 100%;
+    width: 100%;
+    @include flex(center, center);
+
+    .Sub-Container {
+        width: 800px;
+        height: 600px;
+        border: 0.5px solid lightgray;
+        display: flex;
+
+        .Box1 {
+            height: 100%;
+            width: 60%;
+            border: 0.5px solid lightgray;
+            box-sizing: border-box;
+            @include flex(center, center);
+            flex-direction: column;
+
+            .Sub-Box1 {
+                height: 80%;
+                width: 85%;
+                border: 0.5px solid lightgray;
+                box-sizing: border-box;
+
+                .Header {
+                    height: 20%;
+                    width: 100%;
+                    // border: 0.5px solid lightgray;
+                    box-sizing: border-box;
+
+                    .Sub-Header1 {
+                        height: 50%;
+                        width: 100%;
+                        // border: 0.5px solid lightgray;
+                        // box-sizing: border-box;
+                        @include flex(flex-start, flex-start);
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: blue;
+                    }
+
+                    .Sub-Header2 {
+                        height: 50%;
+                        width: 100%;
+                        // border: 0.5px solid lightgray;
+                        // box-sizing: border-box;
+                        font-weight: 450;
+                        font-size: 20px;
+                    }
+                }
+
+                .Body {
+                    height: 60%;
+                    width: 100%;
+                    border: 0.5px solid lightgray;
+                    box-sizing: border-box;
+                    .Sub-Body1 {
+                        display: flex;
+                        .TextField {
+                            margin: 4px;
+                            width: 200px;
+                        }
+                    }
+
+                    .TextField {
+                        margin: 20px 4px 0 4px;
+                        width: 394px;
+                    }
+
+                    .Sub-Body2 {
+                        display: flex;
+                        .TextField {
+                            margin: 30px 4px 0 4px;
+                            width: 200px;
+                        }
+                    }
+
+                    .MuiFormLabel-root {
+                        color: rgba(0, 0, 0, 0.692);
+                        font-size: 15px;
+                    }
+                }
+                .Footer {
+                    height: 20%;
+                    width: 100%;
+                    border: 0.5px solid lightgray;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        .Box2 {
+            height: 100%;
+            width: 40%;
+            border: 0.5px solid lightgray;
+            box-sizing: border-box;
+            @include flex(center, center);
+            flex-direction: column;
+            padding: 20px;
+            text-align: center;
+
+            .Account-Image {
+                width: 80%;
+                height: 42%;
+            }
+
+            .Account-Text {
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}

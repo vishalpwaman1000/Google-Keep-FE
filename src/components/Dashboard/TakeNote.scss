@@ -1,0 +1,91 @@
+@mixin flex($Justice, $Align) {
+    display: flex;
+    justify-content: $Justice;
+    align-items: $Align;
+}
+
+.TakeNote-Container {
+    height: 100%;
+    width: 100%;
+    @include flex(center, center);
+
+    .Sub-TakeNote-Container {
+        height: 70%;
+        width: 550px;
+        // border: 0.5px solid lightgray;
+
+        .Input-Field1 {
+            height: 40px;
+            width: 100%;
+            // border: 0.5px solid lightgray;
+            border-radius: 10px;
+            @include flex(center, center);
+            box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.329);
+            transition: height 0.1s;
+            z-index: 1;
+
+            .Sub-Input {
+                height: 100%;
+                width: 80%;
+                padding: 0 0 0 20px;
+                font-family: "Roboto";
+                font-weight: 400;
+                // border: 0.5px solid lightgray;
+                cursor: text;
+                @include flex(flex-start, center);
+            }
+        }
+
+        .Input-Field2 {
+            height: 155px;
+            padding: 10px;
+            width: 100%;
+            // border: 0.5px solid lightgray;
+            border-radius: 10px;
+            box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.329);
+            display: flex;
+            flex-direction: column;
+            font-family: "Roboto";
+            font-weight: 400;
+            // transition: height 0.1s;
+            // z-index: 1;
+
+            .Title {
+                display: flex;
+                // border: 0.5px solid lightgray;
+                margin: 5px 0;
+            }
+            .TakeANote {
+                // border: 0.5px solid lightgray;
+            }
+            .MuiInput-underline::before,
+            ::after {
+                border-bottom: none;
+            }
+
+            .AddFunctionality {
+                display: flex;
+                justify-content: space-between;
+
+                .Sub-AddFunctionality1 {
+                    margin: 8px 0 0 0;
+                    display: flex;
+                    .IconButton {
+                        margin: 0 3px 0 2px;
+                    }
+                }
+
+                .Sub-AddFunctionality2 {
+                    text-transform: none;
+                    font-family: Arial;
+                    font-weight: 550;
+                    font-size: 15px;
+                }
+
+                .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+                    color: black;
+                }
+            }
+        }
+    }
+}

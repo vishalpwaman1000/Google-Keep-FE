@@ -1,0 +1,22 @@
+@mixin flex($Justice, $Align) {
+    display: flex;
+    justify-content: $Justice;
+    align-items: $Align;
+}
+
+.UpdateNote-Container{
+    height: 28%;
+    width: 100%;
+    // border: 0.5px solid lightgray;
+    margin: 8px 0 0 0;
+
+    .UpdateNote-Sub-Container{
+        height: 100%;
+        width: 100%;
+        @include flex(center, flex-end);
+
+        .IconButton{
+            margin: 0 5px 0 5px;
+        }
+    }
+}

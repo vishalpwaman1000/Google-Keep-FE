@@ -1,0 +1,50 @@
+@mixin Flex($Justice, $Align) {
+    display: flex;
+    justify-content: $Justice;
+    align-items: $Align;
+}
+
+.Header-Container {
+    width: 100%;
+    height: 100%;
+    @include Flex(center, center);
+
+    .Header-Sub-Container {
+        width: 98%;
+        height: 90%;
+        // border: 0.5px solid lightgray;
+        box-sizing: border-box;
+        @include Flex(space-between, center);
+
+        .Sub-Header1 {
+            width: 15%;
+            height: 100%;
+            @include Flex(flex-start, center);
+            // border: 0.5px solid lightgray;
+            .NoteIcon {
+                height: 35px;
+                width: 32px;
+                margin: 0 10px;
+            }
+
+            .NoteText {
+                color: #5f6368;
+                font-family: Arial;
+                font-size: 22px;
+                margin: 0 0 0 10px;
+            }
+        }
+
+        .Sub-Header2 {
+            width: 85%;
+            height: 100%;
+            @include Flex(center, center);
+        }
+        .Sub-Header3 {
+            width: 5%;
+            height: 100%;
+            @include Flex(center, center);
+            // border: 0.5px solid lightgray;
+        }
+    }
+}

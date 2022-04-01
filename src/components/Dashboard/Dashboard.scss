@@ -1,0 +1,131 @@
+@mixin flex($Justice, $Align) {
+    display: flex;
+    justify-content: $Justice;
+    align-items: $Align;
+}
+
+@mixin HW($Height, $Width) {
+    height: $Height;
+    width: $Width;
+}
+
+.Dashboard-Container {
+    @include HW(100%, 100%);
+    // height: 100%;
+    // width: 100%;
+    .Sub-Container {
+        @include HW(100%, 100%);
+        // height: 100%;
+        // width: 100%;
+        .Header {
+            @include HW(11%, 100%);
+            // height: 11%;
+            // width: 100%;
+            border: 0.5px solid lightgray;
+            box-sizing: border-box;
+        }
+
+        .Body {
+            @include HW(89%, 100%);
+            // height: 89%;
+            // width: 100%;
+            display: flex;
+            .Menu1 {
+                @include HW(98%, 50px);
+                // width: 50px;
+                // height: 98%;
+                box-sizing: border-box;
+                // border: 0.5px solid lightgray;
+                transition: width 0.1s;
+                z-index: 1;
+                margin: 10px 0 0 0;
+            }
+            .Menu2 {
+                @include HW(98%, 300px);
+                // width: 300px;
+                // height: 98%;
+                box-sizing: border-box;
+                // border: 0.5px solid lightgray;
+                transition: width 0.1s;
+                z-index: 1;
+                margin: 10px 0 0 0;
+            }
+            .Sub-Body1 {
+                @include HW(100%, 1289px);
+                // width: 1289px;
+                // height: 100%;
+                box-sizing: border-box;
+                // border: 0.5px solid lightgray;
+                // transition: width 1;
+                z-index: 1;
+                padding: 10px;
+            }
+            .Sub-Body2 {
+                @include HW(100%, 1038px);
+                // width: 1038px;
+                // height: 100%;
+                box-sizing: border-box;
+                // border: 0.5px solid lightgray;
+                // transition: width 1;
+                z-index: 1;
+                padding: 10px;
+            }
+
+            .MenuButton1 {
+                @include HW(50px, 100%);
+                // width: 100%;
+                // height: 50px;
+                @include flex(flex-start, center);
+                border-radius: 0px 30px 30px 0px;
+                background-color: rgba(255, 209, 124, 0.575);
+                transition: width 0.1s;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+            .MenuButton2 {
+                @include HW(50px, 100%);
+                // width: 100%;
+                // height: 50px;
+                @include flex(flex-start, center);
+                transition: width 0.1s;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+            .MenuButton2:hover {
+                border-radius: 0 25px 25px 0;
+                background-color: rgba(211, 211, 211, 0.26);
+            }
+
+            .MenuText {
+                margin: 0 0 0 20px;
+                font-size: 14px;
+                font-family: "Roboto";
+                font-weight: 450;
+            }
+
+            .Sub-Sub-Body1 {
+                // border: 0.5px solid lightgray;
+                @include HW(fit-content, 100%);
+                box-sizing: border-box;
+                // width: 100%;
+                // height: fit-content;
+                margin: 20px;
+                transition: height 0.5s;
+                z-index: 1;
+            }
+
+            .Sub-Sub-Body2 {
+                @include HW(fit-content, 100%);
+                // width: 100%;
+                // height: fit-content;
+                // border: 0.5px solid lightgray;
+                box-sizing: border-box;
+                margin: 20px;
+                transition: height 0.5s;
+                z-index: 1;
+            }
+        }
+    }
+}

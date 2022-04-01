@@ -1,0 +1,49 @@
+.UpdateNote-Container {
+    height: 100%;
+    width: 100%;
+
+    .Title {
+        display: flex;
+        // border: 0.5px solid lightgray;
+        margin: 10px 0;
+    }
+    .TakeANote {
+        // border: 0.5px solid lightgray;
+        margin: 10px 0;
+    }
+    .MuiInput-underline::before,
+    ::after {
+        border-bottom: none;
+    }
+
+    .AddFunctionality {
+        display: flex;
+        justify-content: space-between;
+
+        .Sub-AddFunctionality1 {
+            margin: 8px 0 0 0;
+            display: flex;
+            .IconButton {
+                margin: 0 3px 0 2px;
+            }
+        }
+
+        .Sub-AddFunctionality2 {
+            text-transform: none;
+            font-family: Arial;
+            font-weight: 550;
+            font-size: 15px;
+        }
+
+        .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+            color: black;
+        }
+    }
+
+    .makeStyles-paper-7{
+        border: none;
+        border-radius: 20px;
+        height: 190px;
+    }
+}
+
